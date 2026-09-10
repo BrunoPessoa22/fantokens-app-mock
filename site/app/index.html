@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FanTokens · app concept</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1D0238">
+<link rel="stylesheet" href="frame.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar"><span>9:41</span><span class="sb-right"><i data-lucide="signal"></i><i data-lucide="wifi"></i><span class="bat"></span></span></div>
+  <div class="app" id="app">
+
+  <!-- ============================= TODAY ============================= -->
+  <section class="screen" data-screen="today">
+    <div class="topbar">
+      <div class="wordmark grow"><span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M15.6 3.3c.4-.9 1.4-1.4 2.3-1.1.9.3 1.4 1.3 1 2.2-.3.7-.9 1.1-1.6 1.2.8 1.1 1.2 2.5 1.2 4 0 4.9-4.3 9-9.3 9C6 18.6 4 17.1 4 15c0-.7.6-1.3 1.3-1.3S6.6 14.3 6.6 15c0 .6.7 1 2.6 1 3.6 0 6.6-2.9 6.6-6.4 0-1.3-.4-2.4-1.1-3.2-.5-.6-.6-1.4-.3-2.1z"/></svg></span><b>FanTokens</b></div>
+      <button class="iconbtn" data-go="alerts"><i data-lucide="bell"></i></button>
+      <button class="avatar" data-go="you">BP</button>
+    </div>
+
+    <div class="largetitle">
+      <h1>Thursday</h1>
+      <div class="sub">7 fixtures with a Fan Token in the next 48 hours. One of them kicks off tonight.</div>
+    </div>
+
+    <div class="pad">
+      <div class="hero" data-go="matchday">
+        <div class="grain"></div>
+        <div class="between">
+          <span class="pill live"><span class="dot pulse"></span>Tonight</span>
+          <span class="s12 muted">UEFA Champions League</span>
+        </div>
+        <div class="vs">
+          <div class="side"><span class="crest lg" style="background:#1B458F">FB</span><span class="nm">Fenerbahçe</span></div>
+          <div class="mid"><div class="t num">16:45</div><div class="k">Kick-off in 2h 00m</div></div>
+          <div class="side"><span class="crest lg" style="background:#8E1F2F">ASR</span><span class="nm">AS Roma</span></div>
+        </div>
+        <div class="between mt10">
+          <span class="tokchip"><span class="crest sm" style="background:#1B458F">FB</span>$0.3246 <span class="delta down">-1.51%</span></span>
+          <span class="tokchip"><span class="crest sm" style="background:#8E1F2F">ASR</span>$0.867 <span class="delta down">-1.37%</span></span>
+        </div>
+        <div class="s12 dimtext mt10">Roma's on-chain pool holds <b>$11.3k</b>. A $600 market buy is 5% of reserves and moves the price ~5%. The Intern will watch it live.</div>
+        <div class="rowx mt14"><span class="btn btn-primary sm"><i data-lucide="radio"></i>Open the match room</span><span class="pill spark"><i data-lucide="zap"></i>2x league points</span></div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">The Intern</span><span class="more">14:41 UTC</span></div>
+    <div class="pad">
+      <div class="card" data-go="intern">
+        <div class="rowx"><span class="intern-av"><i data-lucide="glasses"></i></span>
+          <div class="grow"><div class="s14" style="font-weight:600">Morning note</div><div class="s12 muted">Read in 40 seconds</div></div>
+          <i data-lucide="chevron-right" style="width:16px;height:16px;color:var(--faint)"></i></div>
+        <div class="s14 dimtext mt10" style="line-height:1.5">Risk-off. CHZ is <b>-5.8%</b> and 47 of 65 Fan Tokens are red on the day, so most of what you will see below is beta, not news.<br><br>Two things are not beta. <b>NAP +11.4%</b> on volume up 556% against its own prior day — that is Napoli specific. And <b>SEVILLA</b>, whose volume went up <b>2,002%</b> the day before it plays Valencia; the token itself is only -2.4%, so the flow arrived before the price did.</div>
+        <div class="srcline"><span class="tag">briefing</span><span class="tag">capital_rotation</span><span class="tag">health_matrix</span><span>Fan Token Intel · 14:41 UTC</span></div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">Market pulse</span><span class="more" data-go="markets">All 65</span></div>
+    <div class="pad gridcards">
+      <div class="stat"><div class="k">24h volume, all Fan Tokens</div><div class="v">$62.5M</div></div>
+      <div class="stat"><div class="k">Regime</div><div class="v" style="font-size:17px">Risk-off</div></div>
+      <div class="stat"><div class="k">Fear &amp; greed</div><div class="v">69</div></div>
+      <div class="stat"><div class="k">On-chain TVL</div><div class="v">$1.82M <span class="delta down" style="font-size:12px">-4.4%</span></div></div>
+    </div>
+
+    <div class="sechead"><span class="label">Moving now</span><span class="more">24h</span></div>
+    <div class="chips" id="movers"></div>
+
+    <div class="sechead"><span class="label">Newsroom</span><span class="more">All articles</span></div>
+    <div>
+      <div class="story" data-go="article">
+        <div><div class="kicker">Analysis</div><h3>Napoli is the only Fan Token pulling money in a red market</h3>
+          <div class="meta"><span>FanTokens Newsroom</span><span>·</span><span>26 min ago</span><span class="pill up" style="height:19px;font-size:10px">NAP +11.4%</span></div></div>
+        <div class="thumb" style="background:#0E5C7A"><span class="crest" style="background:#12A0D7">NAP</span></div>
+      </div>
+      <div class="story" data-go="article">
+        <div><div class="kicker">Matchday</div><h3>Roma travels to Istanbul with the thinnest pool of any top-ten token</h3>
+          <div class="meta"><span>FanTokens Newsroom</span><span>·</span><span>1h ago</span></div></div>
+        <div class="thumb" style="background:#5A1420"><span class="crest" style="background:#8E1F2F">ASR</span></div>
+      </div>
+      <div class="story" data-go="article">
+        <div><div class="kicker">Flows</div><h3>Someone is buying Porto: 217 whale prints, $514k, two days before the derby</h3>
+          <div class="meta"><span>FanTokens Newsroom</span><span>·</span><span>3h ago</span></div></div>
+        <div class="thumb" style="background:#0A2470"><span class="crest" style="background:#0033A0">PRT</span></div>
+      </div>
+      <div class="story" data-go="article">
+        <div><div class="kicker">Explainer</div><h3>What a health grade actually measures, and why 41 tokens sit below C</h3>
+          <div class="meta"><span>FanTokens Newsroom</span><span>·</span><span>Yesterday</span></div></div>
+        <div class="thumb"><span class="crest" style="background:#FF0051">FT</span></div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">Your clubs, off the chart</span></div>
+    <div class="pad">
+      <div class="card">
+        <div class="between"><div><div class="s14" style="font-weight:600">Roma opens a shirt vote at full time</div>
+          <div class="s12 muted mt6">Holding 50 ASR gets you a ballot. 3 rewards and 1 poll are live across the clubs you follow.</div></div>
+          <span class="crest" style="background:#8E1F2F">ASR</span></div>
+        <div class="rowx mt14"><span class="btn btn-ghost sm"><i data-lucide="vote"></i>See rewards</span><span class="s12 muted">via Socios.com</span></div>
+      </div>
+    </div>
+
+    <div class="foot">Prices, grades, pools, whale prints and fixtures on this screen are live Fan Token Intel data, captured 10 Sep 2026 14:45 UTC. Descriptive data only — not advice.</div>
+  </section>
+
+  <!-- ============================= MARKETS ============================= -->
+  <section class="screen" data-screen="markets">
+    <div class="topbar">
+      <div class="grow"><h2>Markets</h2><div class="sub">65 Fan Tokens · one universe, ranked</div></div>
+      <button class="iconbtn"><i data-lucide="search"></i></button>
+      <button class="iconbtn"><i data-lucide="sliders-horizontal"></i></button>
+    </div>
+    <div class="pad mt10">
+      <div class="seg" id="mkt-seg">
+        <button data-seg data-cat="all" data-selected="true">All</button>
+        <button data-seg data-cat="club">Clubs</button>
+        <button data-seg data-cat="nt">Nations</button>
+        <button data-seg data-cat="esports">Esports</button>
+        <button data-seg data-cat="motor">Motor</button>
+      </div>
+    </div>
+    <div class="chips mt10" id="mkt-sort">
+      <button data-sort="health" data-selected="true">Health</button>
+      <button data-sort="chg">24h move</button>
+      <button data-sort="vol">Volume</button>
+      <button data-sort="flow">Flow today</button>
+      <button data-sort="depth">On-chain depth</button>
+    </div>
+    <div class="pad mt10">
+      <div class="card flat s12 dimtext" style="padding:11px 12px">
+        <div class="rowx"><i data-lucide="info" style="width:14px;height:14px;color:var(--spark)"></i><span>Grades are percentile ranks inside the Fan Token universe, not a rating of the club. <b>B</b> is the top 30% here.</span></div>
+      </div>
+    </div>
+    <div id="mkt-list" class="mt10"></div>
+    <div class="foot">Health, volume and 24h change: Fan Token Intel health matrix and realtime prices, 14:44 UTC. 5 tokens are flagged <b>frozen feed</b> — the collector is re-serving an unchanged price. Aggregators show those as live.</div>
+  </section>
+
+  <!-- ============================= TOKEN ============================= -->
+  <section class="screen" data-screen="token">
+    <div class="topbar">
+      <button class="back" data-go="markets"><i data-lucide="chevron-left"></i>Markets</button>
+      <div class="grow"></div>
+      <button class="iconbtn"><i data-lucide="star"></i></button>
+      <button class="iconbtn"><i data-lucide="bell-plus"></i></button>
+    </div>
+    <div class="pad mt10">
+      <div class="rowx"><span class="crest lg" style="background:#8E1F2F">ASR</span>
+        <div class="grow"><div style="font-family:var(--display);font-weight:600;font-size:18px">AS Roma</div>
+          <div class="s12 muted">ASR · Serie A · Chiliz Chain</div></div>
+        <span class="grade gB">B</span></div>
+      <div class="rowx mt14" style="align-items:baseline;gap:10px">
+        <span class="num" style="font-family:var(--display);font-weight:600;font-size:36px;letter-spacing:-.035em">$0.867</span>
+        <span class="delta down" style="font-size:16px">-1.37%</span>
+      </div>
+      <div class="rowx mt6"><span class="pill up"><span class="dot"></span>Live · binance · 36s</span><span class="pill">64.0 CHZ</span></div>
+    </div>
+    <div class="pad mt14"><div class="chartwrap" id="asr-chart"></div></div>
+    <div class="chips mt6">
+      <button data-chip data-selected="true">10d</button><button data-chip>24h</button><button data-chip>7d</button><button data-chip>30d</button><button data-chip>1y</button>
+      <button data-chip><i data-lucide="flag" style="width:12px;height:12px"></i> Matches</button>
+    </div>
+    <div class="pad mt14 gridcards">
+      <div class="stat"><div class="k">24h volume</div><div class="v">$2.43M</div></div>
+      <div class="stat"><div class="k">Health score</div><div class="v">96 <span class="s12 muted">/ B</span></div></div>
+      <div class="stat"><div class="k">Whale flow, 4h</div><div class="v up" style="font-size:17px">79% buy</div></div>
+      <div class="stat"><div class="k">On-chain pool</div><div class="v">$11.3k</div></div>
+    </div>
+
+    <div class="sechead"><span class="label">What the Intern sees</span></div>
+    <div class="pad">
+      <div class="card">
+        <div class="rowx"><span class="intern-av"><i data-lucide="glasses"></i></span><div class="s13" style="font-weight:600">Roma reads as a pre-game token</div></div>
+        <div class="s14 dimtext mt10" style="line-height:1.5">Across <b>11 completed fixtures</b>, ASR closed higher during play <b>54.5%</b> of the time — a coin flip. The pattern is on either side of it: the average move from kick-off to +24h is <b>-0.22%</b>, and the whole 24h-before to 24h-after window averages <b>-0.02%</b>. The move, when there is one, has usually happened before kick-off.</div>
+        <div class="hr"></div>
+        <div class="kv"><span class="k">Best window in the sample</span><span class="v up">+3.46%</span></div>
+        <div class="kv"><span class="k">Worst window</span><span class="v down">-3.59%</span></div>
+        <div class="kv"><span class="k">Whale prints, 4h</span><span class="v">12 · $18.8k</span></div>
+        <div class="srcline"><span class="tag">match_impact_history</span><span class="tag">whale_flows</span><span>Descriptive data, not advice</span></div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">Last matches, and what the token did</span></div>
+    <div class="pad" id="asr-matches"></div>
+
+    <div class="sechead"><span class="label">Liquidity you can actually take</span></div>
+    <div class="pad">
+      <div class="card">
+        <div class="between"><span class="s13">ASR / WCHZ on Kayen</span><span class="pill">0.3% fee</span></div>
+        <div class="mt10 depthbar"><span style="width:26%"></span></div>
+        <div class="between mt6 s12 muted"><span>Pool $11,315</span><span>1% of reserves = 1.28% slippage</span></div>
+        <div class="s12 dimtext mt10">Above ~$560 you are paying more in slippage than the whole 24h Binance spread. The Intern will route you or tell you to wait.</div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">Next up</span></div>
+    <div class="pad stack">
+      <div class="card flat"><div class="between"><div><div class="s13" style="font-weight:600">Fenerbahçe vs AS Roma</div><div class="s12 muted mt6">UEFA Champions League · today 16:45 UTC</div></div><span class="pill live"><span class="dot pulse"></span>2h</span></div></div>
+      <div class="card flat"><div class="between"><div><div class="s13" style="font-weight:600">Torino vs AS Roma</div><div class="s12 muted mt6">Serie A · 14 Sep 16:30 UTC</div></div><i data-lucide="chevron-right" style="width:16px;height:16px;color:var(--faint)"></i></div></div>
+      <div class="card flat"><div class="between"><div><div class="s13" style="font-weight:600">AS Roma vs Inter</div><div class="s12 muted mt6">Serie A · 19 Sep 16:00 UTC</div></div><i data-lucide="chevron-right" style="width:16px;height:16px;color:var(--faint)"></i></div></div>
+    </div>
+
+    <div class="foot">Grade B = 89th percentile of the Fan Token universe on volume and price stability. Liquidity, spread and holder pillars had no data this cycle and were excluded, not scored as zero.</div>
+
+  </section>
+
+  <!-- ============================= MATCHDAY ============================= -->
+  <section class="screen" data-screen="matchday">
+    <div class="topbar">
+      <button class="back" data-go="today"><i data-lucide="chevron-left"></i>Today</button>
+      <div class="grow"><h2>Match room</h2><div class="sub">Fenerbahçe vs AS Roma · UCL</div></div>
+      <span class="pill live"><span class="dot pulse"></span>63'</span>
+    </div>
+
+    <div class="pad mt10">
+      <div class="hero">
+        <div class="grain"></div>
+        <div class="vs">
+          <div class="side"><span class="crest lg" style="background:#1B458F">FB</span><span class="nm">Fenerbahçe</span></div>
+          <div class="mid"><div class="t num">1 - 1</div><div class="k">Şükrü Saracoğlu</div></div>
+          <div class="side"><span class="crest lg" style="background:#8E1F2F">ASR</span><span class="nm">AS Roma</span></div>
+        </div>
+        <div class="rowx mt10" style="justify-content:center;gap:6px">
+          <span class="pill">12' Goal FEN</span><span class="pill">47' Goal ROM</span><span class="pill">58' Yellow</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">Both tokens, since kick-off</span><span class="more">Demo tape</span></div>
+    <div class="pad"><div class="card" style="padding:12px 10px 8px">
+      <div class="chartwrap" id="tape-chart"></div>
+      <div class="legend" style="padding:6px 4px 0">
+        <span><i class="sw" style="background:#8E1F2F"></i>ASR -0.9%</span>
+        <span><i class="sw" style="background:#1B458F"></i>FB +1.8%</span>
+        <span><i class="sw" style="background:rgba(237,237,237,.35)"></i>Goals</span>
+      </div>
+    </div></div>
+
+    <div class="sechead"><span class="label">Odds against the token</span></div>
+    <div class="pad">
+      <div class="card">
+        <div class="between"><span class="s13" style="font-weight:600">The market has an opinion. The token barely moves.</span></div>
+        <div class="kv mt10"><span class="k">Roma win, implied</span><span class="v">47.5% <span class="muted s12">to</span> 26.0%</span></div>
+        <div class="kv"><span class="k">ASR, same window</span><span class="v down">-0.9%</span></div>
+        <div class="kv"><span class="k">Divergence</span><span class="v spark" style="color:var(--spark)">21.5 pts vs 0.9%</span></div>
+        <div class="s12 dimtext mt10" style="line-height:1.5">Last time these two curves were measured for Roma — Dortmund 2-2, 15 Aug — the draw price went from <b>24.5%</b> to <b>99.5%</b> inside the last 20 minutes while ASR moved <b>-0.12%</b> during play and <b>-0.47%</b> in the hour after. In this market the odds do the reacting.</div>
+        <div class="srcline"><span class="tag">match_odds</span><span class="tag">polymarket</span><span class="tag">match_impact_history</span></div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">Room</span><span class="more">1,204 here</span></div>
+    <div class="pad stack">
+      <div class="card flat"><div class="rowx"><span class="intern-av"><i data-lucide="glasses"></i></span>
+        <div class="grow s13"><b>The Intern</b> · 47'<div class="dimtext mt6" style="line-height:1.45">Equaliser. Kayen depth on ASR just thinned to $10.9k — the pool is 3.7% smaller than at kick-off. Anything over $400 on-chain is going to hurt right now.</div></div></div></div>
+      <div class="card flat"><div class="rowx"><span class="avatar" style="background:#8E1F2F">GC</span>
+        <div class="grow s13"><b>giallorossi_chz</b> · 48'<div class="dimtext mt6">told you. every single away game.</div></div></div></div>
+      <div class="card flat"><div class="rowx"><span class="avatar" style="background:#1B458F">KY</span>
+        <div class="grow s13"><b>kadikoy19</b> · 51'<div class="dimtext mt6">FB pool is 4x deeper, that is the whole story of this room</div></div></div></div>
+    </div>
+
+    <div class="pad mt14">
+      <div class="card" style="border-color:rgba(255,0,81,.35);background:rgba(255,0,81,.10)">
+        <div class="between"><div><div class="s13" style="font-weight:600">Double points until full time</div>
+          <div class="s12 dimtext mt6">Every counted trade in this window scores 2x in Rodada 12. Wash trades score zero, as always.</div></div>
+          <span class="pill live"><i data-lucide="zap"></i>2x</span></div>
+      </div>
+    </div>
+    <div class="foot">The in-play tape on this screen is a demo: kick-off is at 16:45 UTC today and the snapshot was taken at 14:45. Everything below the tape — odds curve, depth, the 15 Aug replay — is real Fan Token Intel data.</div>
+  </section>
+
+  <!-- ============================= INTERN ============================= -->
+  <section class="screen" data-screen="intern" style="padding-bottom:172px">
+    <div class="topbar">
+      <span class="intern-av"><i data-lucide="glasses"></i></span>
+      <div class="grow"><h2>The Intern</h2><div class="sub">Reads Fan Token Intel. Never tells you what to buy.</div></div>
+      <button class="iconbtn"><i data-lucide="history"></i></button>
+    </div>
+
+    <div class="pad mt14">
+      <div class="msg"><span class="intern-av"><i data-lucide="glasses"></i></span>
+        <div class="bubble them">Morning. Risk-off day: CHZ -5.8%, 47 of 65 tokens red. Two things are not just beta — Napoli and Sevilla. Ask me about either, or about tonight.</div></div>
+
+      <div class="msg mine"><div class="bubble me">Can I buy $500 of ASR before kick-off without moving the price?</div></div>
+
+      <div class="msg"><span class="intern-av"><i data-lucide="glasses"></i></span>
+        <div class="bubble them">Not on-chain, no.
+          <div class="card flat mt10" style="padding:10px 12px">
+            <div class="kv"><span class="k">ASR/WCHZ pool, Kayen</span><span class="v">$11,315</span></div>
+            <div class="kv"><span class="k">Your order</span><span class="v">4.4% of reserves</span></div>
+            <div class="kv"><span class="k">Slippage at 5% of reserves</span><span class="v down">5.03%</span></div>
+            <div class="kv"><span class="k">Binance ASR/USDT, 24h</span><span class="v">$2.43M</span></div>
+          </div>
+          <div class="mt10">On-chain you would pay roughly 4.4% impact plus the 0.3% fee, then the same again on the way out. On Binance the same $500 is 0.02% of the day's tape.<br><br>Kayen is the only venue that scores your League points without a read-only key. If that matters, split it: $150 on-chain is 1.3% of reserves.</div>
+          <div class="srcline"><span class="tag">token_context</span><span class="tag">dex_liquidity</span><span class="tag">realtime_prices</span><span>14:41 UTC</span></div>
+        </div></div>
+
+      <div class="msg mine"><div class="bubble me">Why is Napoli up 11%?</div></div>
+
+      <div class="msg"><span class="intern-av"><i data-lucide="glasses"></i></span>
+        <div class="bubble them">I can tell you what moved. I don't read the wire, so I won't invent a reason.
+          <div class="card flat mt10" style="padding:10px 12px">
+            <div class="kv"><span class="k">NAP</span><span class="v up">$0.2253 &nbsp;+11.4%</span></div>
+            <div class="kv"><span class="k">Volume vs prior day</span><span class="v up">+556%</span></div>
+            <div class="kv"><span class="k">Universe median today</span><span class="v down">-2.0%</span></div>
+            <div class="kv"><span class="k">Price-stability pillar</span><span class="v">75 <span class="muted s12">was 90</span></span></div>
+          </div>
+          <div class="mt10">So: real inflow, not a market-wide bounce, and large enough against Napoli's own history that the stability pillar dropped. The only comparable flow today is SEVILLA, +2,002% on a much smaller base, the day before it plays Valencia.</div>
+          <div class="srcline"><span class="tag">capital_rotation</span><span class="tag">health_matrix</span><span>Descriptive data, not advice</span></div>
+        </div></div>
+
+      <div class="rowx mt10" style="gap:8px;flex-wrap:wrap">
+        <span class="pill spark"><i data-lucide="bell-plus"></i>Alert me if NAP flow reverses</span>
+        <span class="pill spark"><i data-lucide="git-compare"></i>Compare with GAL</span>
+        <span class="pill spark"><i data-lucide="notebook-pen"></i>Add to my note</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================= TRADE ============================= -->
+  <section class="screen" data-screen="trade">
+    <div class="topbar">
+      <div class="grow"><h2>Trade</h2><div class="sub">Powered by Kayen · Chiliz Chain</div></div>
+      <button class="iconbtn"><i data-lucide="clock"></i></button>
+      <button class="iconbtn"><i data-lucide="settings-2"></i></button>
+    </div>
+
+    <div class="pad mt10">
+      <div class="seg"><button data-seg data-selected="true">Swap</button><button data-seg>Limit</button><button data-seg>Season plan</button></div>
+    </div>
+
+    <div class="pad mt14">
+      <div class="swap">
+        <div class="leg">
+          <div class="top"><span>You pay</span><span>Balance 41,208 CHZ</span></div>
+          <div class="main"><span class="amt">36,900</span>
+            <span class="sel"><span class="crest sm" style="background:#FF0051">CHZ</span>CHZ<i data-lucide="chevron-down"></i></span></div>
+          <div class="s12 muted mt6">$500.36</div>
+        </div>
+        <div class="swapdiv"><span class="rotate"><i data-lucide="arrow-up-down"></i></span></div>
+        <div class="leg">
+          <div class="top"><span>You receive</span><span>Balance 0 ASR</span></div>
+          <div class="main"><span class="amt">551.2</span>
+            <span class="sel"><span class="crest sm" style="background:#8E1F2F">ASR</span>ASR<i data-lucide="chevron-down"></i></span></div>
+          <div class="s12 muted mt6">$477.89 · 1 ASR = 64.0 CHZ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pad mt10">
+      <div class="card" style="border-color:rgba(255,182,72,.4);background:rgba(255,182,72,.08)">
+        <div class="rowx"><i data-lucide="triangle-alert" style="width:16px;height:16px;color:#FFB648"></i>
+          <div class="grow s13" style="font-weight:600">This order is 4.4% of the pool</div></div>
+        <div class="s13 dimtext mt10" style="line-height:1.5">Price impact <b>-4.42%</b> plus 0.3% fee. The same size costs 0.02% of the day's tape on a centralised book. The Intern can cut it into pieces that the pool can absorb.</div>
+        <div class="rowx mt14"><button class="btn btn-primary sm"><i data-lucide="scissors"></i>Route it for me</button><button class="btn btn-outline sm">Trade anyway</button></div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">Route</span><span class="more">Best of 5 venues</span></div>
+    <div class="pad stack">
+      <div class="venue" data-selected="true"><span class="tick"><i data-lucide="check"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Kayen · ASR/WCHZ</div><div class="s12 muted mt6">On-chain, self-custody · 0.30% · scores League points automatically</div></div>
+        <div class="s13 num">551.2</div></div>
+      <div class="venue"><span class="tick"><i data-lucide="check"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Binance · ASR/USDT</div><div class="s12 muted mt6">Read-only key connected · 0.10% taker · $2.43M depth</div></div>
+        <div class="s13 num">576.1</div></div>
+      <div class="venue"><span class="tick"><i data-lucide="check"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Mercado Bitcoin · ASR/BRL</div><div class="s12 muted mt6">Brazil rails, PIX in and out</div></div>
+        <div class="s13 num">573.4</div></div>
+      <div class="venue"><span class="tick"><i data-lucide="check"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Vibe · ASR perp</div><div class="s12 muted mt6">Shorts and leverage · tracked in the League, never scored</div></div>
+        <div class="s13 muted">thin</div></div>
+    </div>
+
+    <div class="pad mt14">
+      <div class="card flat">
+        <div class="kv"><span class="k">Minimum received, 0.5% slippage</span><span class="v">548.4 ASR</span></div>
+        <div class="kv"><span class="k">Network fee</span><span class="v">~0.4 CHZ</span></div>
+        <div class="kv"><span class="k">Pool after your trade</span><span class="v">$11,802</span></div>
+        <div class="kv"><span class="k">League points, if it fills now</span><span class="v" style="color:var(--spark)">+38 (2x window)</span></div>
+      </div>
+    </div>
+
+    <div class="pad mt14">
+      <button class="btn btn-primary full" data-go="receipt"><i data-lucide="scan-face"></i>Swap on Kayen</button>
+      <div class="s12 muted" style="text-align:center;margin-top:10px;line-height:1.5">Self-custody. FanTokens never holds your keys or your tokens.<br>Quotes from Kayen and connected venues, 14:45 UTC.</div>
+    </div>
+  </section>
+
+  <!-- ============================= RECEIPT ============================= -->
+  <section class="screen" data-screen="receipt">
+    <div class="topbar"><button class="back" data-go="trade"><i data-lucide="x"></i>Close</button><div class="grow"></div><button class="iconbtn"><i data-lucide="share"></i></button></div>
+    <div class="pad" style="text-align:center;padding-top:26px">
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(43,224,141,.16);display:grid;place-items:center;margin:0 auto">
+        <i data-lucide="check" style="width:30px;height:30px;color:var(--up)"></i></div>
+      <h1 style="font-size:24px;margin-top:16px">199.4 ASR</h1>
+      <div class="s13 muted mt6">Swapped 12,900 CHZ · first slice of three</div>
+    </div>
+    <div class="pad mt14">
+      <div class="card flat">
+        <div class="kv"><span class="k">Route</span><span class="v">Kayen · ASR/WCHZ</span></div>
+        <div class="kv"><span class="k">Price impact</span><span class="v">1.31%</span></div>
+        <div class="kv"><span class="k">Fee</span><span class="v">0.30% · $0.52</span></div>
+        <div class="kv"><span class="k">Network</span><span class="v">0.38 CHZ</span></div>
+        <div class="kv"><span class="k">Transaction</span><span class="v" style="color:var(--spark)">0x703c...93f &#8599;</span></div>
+      </div>
+    </div>
+    <div class="pad mt10">
+      <div class="card" style="border-color:rgba(255,0,81,.35)">
+        <div class="between"><div class="s13" style="font-weight:600">Rodada 12</div><span class="pill live"><i data-lucide="zap"></i>2x window</span></div>
+        <div class="rowx mt10" style="align-items:baseline;gap:8px"><span class="num" style="font-family:var(--display);font-weight:600;font-size:26px">+38</span><span class="s13 dimtext">points · rank 158 to 147</span></div>
+        <div class="bar mt10"><span style="width:64%"></span></div>
+        <div class="between mt6 s12 muted"><span>1,284 pts</span><span>96 to the top 100</span></div>
+        <div class="s12 dimtext mt10">Scored on collateral, not notional, and on net flow — so no, you cannot farm it by sending it back and forth.</div>
+      </div>
+    </div>
+    <div class="pad mt10">
+      <div class="card flat"><div class="rowx"><span class="intern-av"><i data-lucide="glasses"></i></span>
+        <div class="grow s13">Slices two and three are queued for 15 and 30 minutes from now. I will hold them if the pool thins below $10k.</div></div></div>
+    </div>
+    <div class="pad mt14"><button class="btn btn-ghost full" data-go="today">Back to today</button></div>
+  </section>
+
+  <!-- ============================= LEAGUE ============================= -->
+  <section class="screen" data-screen="league">
+    <div class="topbar">
+      <div class="grow"><h2>Trading League</h2><div class="sub">Rodada 12 · closes Sunday 23:59 UTC</div></div>
+      <button class="iconbtn" data-go="missions"><i data-lucide="target"></i></button>
+      <button class="iconbtn"><i data-lucide="circle-help"></i></button>
+    </div>
+
+    <div class="pad mt10">
+      <div class="pot">
+        <div class="s12" style="color:rgba(237,237,237,.86);font-weight:600">Prize pool this rodada</div>
+        <div class="amt ticker mt6"><span id="pot">412,500</span> CHZ</div>
+        <div class="cap">about $5,594 · growing 10,000 CHZ a day while the round is open</div>
+        <div class="rowx mt14" style="justify-content:center;gap:8px">
+          <span class="pill"><i data-lucide="users"></i>8,420 in</span><span class="pill"><i data-lucide="timer"></i>3d 09h left</span><span class="pill live"><i data-lucide="zap"></i>2x tonight</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pad mt14">
+      <div class="card">
+        <div class="between"><div class="rowx"><span class="avatar" style="background:#8E1F2F">BP</span>
+          <div><div class="s14" style="font-weight:600">You are 147th</div><div class="s12 muted mt6">of 8,420 · best finish 61st</div></div></div>
+          <div style="text-align:right"><div class="num" style="font-family:var(--display);font-weight:600;font-size:22px">1,284</div><div class="s12 muted">points</div></div></div>
+        <div class="bar mt14"><span style="width:64%"></span></div>
+        <div class="between mt6 s12 muted"><span>Top 100 pays out</span><span>96 points away</span></div>
+      </div>
+    </div>
+
+    <div class="pad mt14">
+      <div class="seg"><button data-seg data-selected="true">Traders</button><button data-seg>Clubs</button><button data-seg>Season</button></div>
+    </div>
+
+    <div class="sechead"><span class="label">Artilharia</span><span class="more">Net flow, square-rooted</span></div>
+    <div>
+      <div class="lb"><span class="rk">1</span><span class="avatar" style="background:#A90432;width:30px;height:30px">KY</span>
+        <div><div class="s13" style="font-weight:600">kadikoy19</div><div class="s12 muted">Galatasaray · 41 counted trades</div></div>
+        <div style="text-align:right"><div class="pts">9,412</div><div class="s12 up">62,400 CHZ</div></div></div>
+      <div class="lb"><span class="rk">2</span><span class="avatar" style="background:#2A2A2A;width:30px;height:30px">TS</span>
+        <div><div class="s13" style="font-weight:600">torcida_sp</div><div class="s12 muted">São Paulo · 96 counted trades</div></div>
+        <div style="text-align:right"><div class="pts">8,880</div><div class="s12 up">48,100 CHZ</div></div></div>
+      <div class="lb"><span class="rk">3</span><span class="avatar" style="background:#8E1F2F;width:30px;height:30px">RM</span>
+        <div><div class="s13" style="font-weight:600">romanista.eth</div><div class="s12 muted">Roma · maker 71% uptime</div></div>
+        <div style="text-align:right"><div class="pts">7,530</div><div class="s12 up">33,900 CHZ</div></div></div>
+      <div class="lb"><span class="rk">4</span><span class="avatar" style="background:#0033A0;width:30px;height:30px">CM</span>
+        <div><div class="s13" style="font-weight:600">chz_maker</div><div class="s12 muted">Porto · maker 88% uptime</div></div>
+        <div style="text-align:right"><div class="pts">7,204</div><div class="s12 up">27,500 CHZ</div></div></div>
+      <div class="lb"><span class="rk">5</span><span class="avatar" style="background:#12A0D7;width:30px;height:30px">NP</span>
+        <div><div class="s13" style="font-weight:600">partenopeo</div><div class="s12 muted">Napoli · 12 counted trades</div></div>
+        <div style="text-align:right"><div class="pts">6,988</div><div class="s12 up">21,000 CHZ</div></div></div>
+      <div class="lb me"><span class="rk">147</span><span class="avatar" style="background:#8E1F2F;width:30px;height:30px">BP</span>
+        <div><div class="s13" style="font-weight:600">you</div><div class="s12 muted">Roma · 6 counted trades</div></div>
+        <div style="text-align:right"><div class="pts">1,284</div><div class="s12 muted">-</div></div></div>
+    </div>
+
+    <div class="sechead"><span class="label">How a point is made</span></div>
+    <div class="pad">
+      <div class="card flat">
+        <div class="kv"><span class="k">Score</span><span class="v">&#8730; net flow, in dollars</span></div>
+        <div class="kv"><span class="k">Fixture window</span><span class="v">2x</span></div>
+        <div class="kv"><span class="k">Maker uptime</span><span class="v">2x</span></div>
+        <div class="kv"><span class="k">Wash trades</span><span class="v down">0</span></div>
+        <div class="kv"><span class="k">Counted on</span><span class="v">Collateral, not notional</span></div>
+        <div class="s12 dimtext mt10" style="line-height:1.5">Square-rooting the flow means a whale cannot buy the table, and counting collateral instead of notional means leverage does not either. Nothing here settles on who wins the match — this is a trading league, not a bet.</div>
+      </div>
+    </div>
+
+    <div class="sechead"><span class="label">Where your trades come from</span></div>
+    <div class="pad stack">
+      <div class="card flat"><div class="between"><div class="rowx"><i data-lucide="link" style="width:16px;height:16px;color:var(--up)"></i><div><div class="s13" style="font-weight:600">Kayen</div><div class="s12 muted mt6">On-chain, counted automatically</div></div></div><span class="pill up">Live</span></div></div>
+      <div class="card flat"><div class="between"><div class="rowx"><i data-lucide="link" style="width:16px;height:16px;color:var(--up)"></i><div><div class="s13" style="font-weight:600">Binance</div><div class="s12 muted mt6">Read-only key · no withdrawal rights</div></div></div><span class="pill up">Live</span></div></div>
+      <div class="card flat"><div class="between"><div class="rowx"><i data-lucide="plus" style="width:16px;height:16px;color:var(--faint)"></i><div><div class="s13" style="font-weight:600">Mercado Bitcoin, OKX, Paribu</div><div class="s12 muted mt6">Connect to count BRL and TRY flow</div></div></div><i data-lucide="chevron-right" style="width:16px;height:16px;color:var(--faint)"></i></div></div>
+    </div>
+    <div class="foot">Prize pool funded by venue sponsorship, not by other traders. Identity-anchored: one scored account per verified person.</div>
+  </section>
+
+  <!-- ============================= MISSIONS ============================= -->
+  <section class="screen" data-screen="missions">
+    <div class="topbar"><button class="back" data-go="league"><i data-lucide="chevron-left"></i>League</button>
+      <div class="grow"><h2>Missions</h2><div class="sub">Resets Monday 00:00 UTC</div></div></div>
+    <div class="pad mt14">
+      <div class="card">
+        <div class="between"><div class="s13" style="font-weight:600">6 day streak</div><span class="pill live"><i data-lucide="flame"></i>x1.3 multiplier</span></div>
+        <div class="streak mt14"><div class="on">M</div><div class="on">T</div><div class="on">W</div><div class="on">T</div><div class="on">F</div><div class="on">S</div><div>S</div></div>
+        <div class="s12 dimtext mt10">A streak day needs one counted action, not one trade. Reading the morning note counts.</div>
+      </div>
+    </div>
+    <div class="sechead"><span class="label">This week</span><span class="more">3 of 6</span></div>
+    <div class="pad card">
+      <div class="mission done"><span class="ic"><i data-lucide="check"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Hold through a full match window</div><div class="s12 muted mt6">Roma vs Atalanta, 5 Sep · +120 pts</div></div></div>
+      <div class="mission done"><span class="ic"><i data-lucide="check"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Read five morning notes</div><div class="s12 muted mt6">5 of 5 · +80 pts</div></div></div>
+      <div class="mission done"><span class="ic"><i data-lucide="check"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Trade a token you have never held</div><div class="s12 muted mt6">ASR · +150 pts</div></div></div>
+      <div class="mission"><span class="ic"><i data-lucide="droplets"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Provide liquidity to a fixture pool for 24h</div><div class="s12 muted mt6">Pays measured carry, net of impermanent loss · +400 pts</div>
+          <div class="bar mt10"><span style="width:0%"></span></div></div></div>
+      <div class="mission"><span class="ic"><i data-lucide="vote"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Use a token for what it is for</div><div class="s12 muted mt6">Cast one club vote on Socios · +100 pts</div></div></div>
+      <div class="mission"><span class="ic"><i data-lucide="users"></i></span>
+        <div class="grow"><div class="s13" style="font-weight:600">Bring a rival</div><div class="s12 muted mt6">Invite someone who supports another club · +250 pts</div></div></div>
+    </div>
+    <div class="sechead"><span class="label">Badges</span></div>
+    <div class="pad clubgrid">
+      <div class="clubpick" data-selected="true"><i data-lucide="shield-check" style="width:20px;height:20px;color:var(--spark)"></i>Derby<br>survivor</div>
+      <div class="clubpick" data-selected="true"><i data-lucide="ruler" style="width:20px;height:20px;color:var(--spark)"></i>Depth<br>aware</div>
+      <div class="clubpick" data-selected="true"><i data-lucide="sunrise" style="width:20px;height:20px;color:var(--spark)"></i>Early<br>bird</div>
+      <div class="clubpick"><i data-lucide="lock" style="width:20px;height:20px"></i>Maker<br>90 days</div>
+    </div>
+    <div class="foot">Missions never ask you to predict a result. They ask you to show up, size correctly and use the token.</div>
+  </section>
+
+  <!-- ============================= YOU ============================= -->
+  <section class="screen" data-screen="you">
+    <div class="topbar"><button class="back" data-go="today"><i data-lucide="chevron-left"></i>Today</button>
+      <div class="grow"><h2>You</h2></div><button class="iconbtn"><i data-lucide="settings"></i></button></div>
+    <div class="pad mt14">
+      <div class="s12 muted">Portfolio</div>
+      <div class="rowx mt6" style="align-items:baseline;gap:10px">
+        <span class="num" style="font-family:var(--display);font-weight:600;font-size:34px;letter-spacing:-.035em">$2,327.31</span>
+        <span class="delta up" style="font-size:15px">+$4.52</span></div>
+      <div class="s12 dimtext mt6">Up 0.19% on a day the universe is down 2.0%. Napoli carried it; everything else you hold is red.</div>
+    </div>
+    <div class="pad mt14" id="holdings"></div>
+    <div class="sechead"><span class="label">Your clubs</span><span class="more">Edit</span></div>
+    <div class="pad">
+      <div class="card">
+        <div class="between"><div class="rowx"><span class="crest lg" style="background:#8E1F2F">ASR</span>
+          <div><div class="s14" style="font-weight:600">AS Roma</div><div class="s12 muted mt6">Following since 2021 · 3 votes cast · 2 rewards claimed</div></div></div></div>
+        <div class="hr"></div>
+        <div class="rowx" style="gap:8px"><span class="crest sm" style="background:#12A0D7">NAP</span><span class="crest sm" style="background:#2A2A2A">SAN</span><span class="crest sm" style="background:#004170">PSG</span>
+          <span class="s12 muted">and 3 more</span></div>
+      </div>
+    </div>
+    <div class="sechead"><span class="label">Account</span></div>
+    <div class="pad stack">
+      <div class="card flat"><div class="between"><div class="rowx"><i data-lucide="wallet" style="width:16px;height:16px;color:var(--spark)"></i><div class="s13">Wallet · self-custody</div></div><span class="s12 muted">0x9f3a...c17b</span></div></div>
+      <div class="card flat"><div class="between"><div class="rowx"><i data-lucide="badge-check" style="width:16px;height:16px;color:var(--up)"></i><div class="s13">Identity verified</div></div><span class="pill up">One account</span></div></div>
+      <div class="card flat"><div class="between"><div class="rowx"><i data-lucide="bell" style="width:16px;height:16px;color:var(--spark)"></i><div class="s13">Alerts</div></div><span class="s12 muted">9 active</span></div></div>
+      <div class="card flat"><div class="between"><div class="rowx"><i data-lucide="gift" style="width:16px;height:16px;color:var(--spark)"></i><div class="s13">Rewards and votes</div></div><span class="s12 muted">via Socios.com</span></div></div>
+    </div>
+    <div class="foot">FanTokens does not custody your assets and does not route your orders anywhere you have not connected.</div>
+  </section>
+
+  <!-- ============================= ARTICLE ============================= -->
+  <section class="screen" data-screen="article">
+    <div class="topbar"><button class="back" data-go="today"><i data-lucide="chevron-left"></i>Today</button><div class="grow"></div>
+      <button class="iconbtn"><i data-lucide="bookmark"></i></button><button class="iconbtn"><i data-lucide="share"></i></button></div>
+    <div class="pad mt14">
+      <div class="kicker" style="font-size:11.5px;font-weight:600;color:var(--spark)">Analysis</div>
+      <h1 style="font-size:27px;line-height:1.14;margin-top:8px">Napoli is the only Fan Token pulling money in a red market</h1>
+      <div class="s12 muted mt10">FanTokens Newsroom · 10 Sep 2026, 14:20 UTC · 3 min read</div>
+    </div>
+    <div class="pad mt14">
+      <div class="card flat"><div class="between"><div class="rowx"><span class="crest" style="background:#12A0D7">NAP</span>
+        <div><div class="s13" style="font-weight:600">SSC Napoli</div><div class="s12 muted mt6">$0.2253 · volume $2.67M</div></div></div>
+        <div style="text-align:right"><div class="delta up" style="font-size:17px">+11.4%</div><div class="s12 muted">24h</div></div></div></div>
+    </div>
+    <div class="pad mt14 readbody">
+      <p>Forty-seven of the sixty-five Fan Tokens we track are down today. CHZ is off <b>5.8%</b>, the fear and greed index reads 69, and the median token in the universe has lost <b>2.0%</b>. On a day like that, most green numbers are noise.</p>
+      <p>Napoli's is not. NAP is up <b>11.4%</b> on <b>$2.67M</b> of volume — against <b>$175,665</b> in the previous twenty-four hours. That is a <b>556%</b> increase measured after the market-wide move is stripped out, which is the only way to read a volume spike honestly.</p>
+      <div class="pullquote">The flow arrives before the price. It did for Sevilla too, and Sevilla has not kicked a ball yet.</div>
+      <p>The second name on the flow table is stranger. <b>SEVILLA</b> traded <b>$232,426</b> against <b>$11,067</b> the day before — a <b>2,002%</b> jump — and the token is still <b>down 2.4%</b>. Sevilla play Valencia tomorrow at 19:00 UTC. Somebody is positioning; the price has not moved yet.</p>
+      <p>Napoli's health grade held at <b>B</b>, but its price-stability pillar fell from 90 to <b>75</b>: the move is large relative to Napoli's own history, which is exactly what a real repricing looks like and exactly what a wash-trading pattern does not.</p>
+    </div>
+    <div class="pad mt10">
+      <div class="card" data-go="intern"><div class="rowx"><span class="intern-av"><i data-lucide="glasses"></i></span>
+        <div class="grow s13"><b>Ask the Intern about this article</b><div class="s12 muted mt6">It has the same numbers and will argue with you about them.</div></div>
+        <i data-lucide="chevron-right" style="width:16px;height:16px;color:var(--faint)"></i></div></div>
+    </div>
+    <div class="foot">Every figure in this piece is a live Fan Token Intel reading, timestamped 14:41 UTC. We are not an aggregator — the numbers come from the same feed the app trades on.</div>
+  </section>
+
+  <!-- ============================= ALERTS ============================= -->
+  <section class="screen" data-screen="alerts">
+    <div class="topbar"><button class="back" data-go="today"><i data-lucide="chevron-left"></i>Today</button>
+      <div class="grow"><h2>Alerts</h2><div class="sub">9 active · 3 new</div></div><button class="iconbtn"><i data-lucide="plus"></i></button></div>
+    <div class="mt10">
+      <div class="notif alert"><span class="ic"><i data-lucide="timer"></i></span>
+        <div class="grow"><div class="t">Kick-off in 2 hours: Fenerbahçe vs Roma</div><div class="d">Both tokens are in your watchlist. The 2x league window opens at 16:45 UTC.</div><div class="w">14:45 UTC</div></div></div>
+      <div class="notif alert"><span class="ic"><i data-lucide="droplets"></i></span>
+        <div class="grow"><div class="t">ASR pool thinned to $11.3k</div><div class="d">Down 3.7% since this morning. Your $500 order would now be 4.4% of reserves.</div><div class="w">14:27 UTC</div></div></div>
+      <div class="notif"><span class="ic"><i data-lucide="fish"></i></span>
+        <div class="grow"><div class="t">Porto: 217 whale prints in 4 hours</div><div class="d">$514,232 total, 119 inflows against 98 outflows. Biggest print $2,370 average.</div><div class="w">13:58 UTC</div></div></div>
+      <div class="notif"><span class="ic"><i data-lucide="trending-up"></i></span>
+        <div class="grow"><div class="t">NAP volume +556% against its own prior day</div><div class="d">You asked me to watch this one. Flow is still one-directional.</div><div class="w">12:40 UTC</div></div></div>
+      <div class="notif"><span class="ic"><i data-lucide="snowflake"></i></span>
+        <div class="grow"><div class="t">BAHIA feed frozen for 82 hours</div><div class="d">The collector is re-serving an unchanged price. We hid the quote from your watchlist instead of showing it as live.</div><div class="w">11:02 UTC</div></div></div>
+      <div class="notif"><span class="ic"><i data-lucide="chevrons-down"></i></span>
+        <div class="grow"><div class="t">You dropped to 158th in Rodada 12</div><div class="d">Three traders passed you overnight. 96 points to the payout line.</div><div class="w">08:15 UTC</div></div></div>
+    </div>
+    <div class="pad mt14">
+      <div class="card flat"><div class="rowx"><i data-lucide="sparkles" style="width:16px;height:16px;color:var(--spark)"></i>
+        <div class="grow s13">Make an alert by asking for it: <span class="dimtext">"tell me when any pool under $30k gets 20% thinner"</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============================= ONBOARD ============================= -->
+  <section class="screen" data-screen="onboard">
+    <div class="topbar"><div class="grow"><h2>Pick your clubs</h2><div class="sub">Step 2 of 3</div></div><span class="s13 muted">Skip</span></div>
+    <div class="pad mt14"><div class="s14 dimtext" style="line-height:1.5">This is the only personalisation we ask for. Your clubs decide your feed, your fixtures, your alerts and which league table you appear in.</div></div>
+    <div class="pad mt14 clubgrid" id="clubgrid"></div>
+    <div class="pad mt14">
+      <div class="card flat"><div class="rowx"><i data-lucide="info" style="width:16px;height:16px;color:var(--spark)"></i>
+        <div class="grow s13">Following a club is free and does not need a token. Two of the four things below need one.</div></div></div>
+    </div>
+    <div class="pad mt14"><button class="btn btn-primary full" data-go="today">Continue with 3 clubs</button></div>
+  </section>
+
+  <div class="dockbar" id="dock-token">
+    <div class="rowx"><button class="btn btn-primary grow" data-open-sheet="trade"><i data-lucide="arrow-left-right"></i>Trade ASR</button>
+      <button class="btn btn-ghost" style="width:52px;padding:0"><i data-lucide="message-square-text"></i></button></div>
+  </div>
+
+  <div class="composer">
+      <div class="chips" style="padding:0 0 8px">
+        <button>What happens to ASR after away wins?</button><button>Who is buying PORTO?</button><button>Cheapest way into SANTOS</button>
+      </div>
+      <div class="field"><i data-lucide="sparkles" style="width:16px;height:16px;color:var(--spark)"></i><span>Ask about any of the 65 tokens</span>
+        <button class="send"><i data-lucide="arrow-up"></i></button></div>
+      <div class="s12 muted" style="text-align:center;margin-top:7px;font-size:10.5px">Powered by the Fan Token Intel MCP · 27 tools · every answer carries its source and its age</div>
+    </div>
+
+  </div><!-- /app -->
+
+  <!-- ============================= SHEET ============================= -->
+  <div class="sheetwrap" id="sheet" hidden>
+    <div class="backdrop" data-close-sheet></div>
+    <div class="sheet">
+      <div class="grabber"></div>
+      <div class="between"><h2 style="font-size:18px">Quick buy</h2><span class="pill">Powered by Kayen</span></div>
+      <div class="rowx mt14"><span class="crest lg" style="background:#8E1F2F">ASR</span>
+        <div class="grow"><div class="s14" style="font-weight:600">AS Roma</div><div class="s12 muted mt6">$0.867 · pool $11.3k · 0.30% fee</div></div></div>
+      <div class="chips mt14" style="padding:0"><button data-chip>$25</button><button data-chip data-selected="true">$100</button><button data-chip>$250</button><button data-chip>Custom</button></div>
+      <div class="card flat mt14">
+        <div class="kv"><span class="k">You pay</span><span class="v">7,375 CHZ</span></div>
+        <div class="kv"><span class="k">You receive</span><span class="v">114.7 ASR</span></div>
+        <div class="kv"><span class="k">Price impact</span><span class="v">0.89%</span></div>
+        <div class="kv"><span class="k">League points</span><span class="v" style="color:var(--spark)">+17</span></div>
+      </div>
+      <button class="btn btn-primary full mt14" data-close-sheet><i data-lucide="scan-face"></i>Confirm with Face ID</button>
+      <div class="s12 muted mt10" style="text-align:center">Quote refreshes every 12 seconds. Self-custody, no deposit.</div>
+    </div>
+  </div>
+
+  <!-- ============================= TAB BAR ============================= -->
+  <nav class="tabbar">
+    <button data-tab="today" data-selected="true"><i data-lucide="newspaper"></i><span>Today</span></button>
+    <button data-tab="markets"><i data-lucide="chart-candlestick"></i><span>Markets</span></button>
+    <button data-tab="trade"><i data-lucide="arrow-left-right"></i><span>Trade</span></button>
+    <button data-tab="intern"><i data-lucide="glasses"></i><span>Intern</span></button>
+    <button data-tab="league"><i data-lucide="trophy"></i><span>League</span></button>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
