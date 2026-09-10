@@ -2,11 +2,11 @@
    Palette: Midnight #1D0238 / Eclipse #40006A / Pepper #FF0051 / Meta Spark #CF85FF / Layer Zero #EDEDED.
    Type: Atyp Text (display) + PP Mori (body/UI). Sentence case everywhere, tracking -0.02em, no gradient text. */
 
-@font-face { font-family: "Atyp Text"; src: url("../assets/fonts/AtypText-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
-@font-face { font-family: "Atyp Text"; src: url("../assets/fonts/AtypText-Semibold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
-@font-face { font-family: "PP Mori"; src: url("../assets/fonts/PPMori-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "PP Mori"; src: url("../assets/fonts/PPMori-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
-@font-face { font-family: "PP Mori"; src: url("../assets/fonts/PPMori-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Atyp Text"; src: url("/assets/fonts/AtypText-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Atyp Text"; src: url("/assets/fonts/AtypText-Semibold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "PP Mori"; src: url("/assets/fonts/PPMori-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "PP Mori"; src: url("/assets/fonts/PPMori-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "PP Mori"; src: url("/assets/fonts/PPMori-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
 
 :root {
   --midnight: #1D0238;
