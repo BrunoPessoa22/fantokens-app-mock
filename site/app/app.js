@@ -210,7 +210,7 @@
     host.innerHTML = pos.map(function (p) {
       var t = by[p[0]], val = t.px * p[1];
       return '<div class="row">' + crest(t) +
-        '<div class="grow"><div class="t-s">' + t.t + '</div><div class="meta mt4">' + p[1].toLocaleString() + ' ' + t.s + '</div></div>' +
+        '<div class="grow"><div class="t-s">' + t.t + '</div><div class="meta mt4">' + p[1].toLocaleString() + ' <span class="coin">' + t.s + '</span></div></div>' +
         '<div class="rt" style="text-align:right"><div class="num" style="font-size:14px">$' + val.toFixed(2) + '</div>' +
         '<div class="delta ' + cls(t.ch) + '" style="font-size:12px;margin-top:2px">' + pct(t.ch) + '</div></div></div>';
     }).join('');

@@ -6,6 +6,9 @@
 <title>FanTokens · app concept</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#181818">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/TTFirsNeue-Regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/TTFirsNeue-DemiBold.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/KallistoHeavy.woff2" crossorigin>
 <link rel="stylesheet" href="/app/frame.css">
 <link rel="stylesheet" href="/app/app.css">
 </head>
@@ -36,8 +39,8 @@
         <div class="side"><span class="crest lg" style="background:#8E1F2F">ASR</span><span class="nm">AS Roma</span></div>
       </div>
       <div class="tokline">
-        <span><b>FB</b> <span class="num">$0.3246</span> <span class="delta down">-1.51%</span></span>
-        <span><b>ASR</b> <span class="num">$0.867</span> <span class="delta down">-1.37%</span></span>
+        <span><b class="coin">FB</b> <span class="num">$0.3246</span> <span class="delta down">-1.51%</span></span>
+        <span><b class="coin">ASR</b> <span class="num">$0.867</span> <span class="delta down">-1.37%</span></span>
       </div>
       <div class="body mt12">Roma's on-chain pool holds <b>$11.3k</b>. A $600 buy takes 5% of it.</div>
       <div class="between mt18"><span class="link">Open the match room <i data-lucide="arrow-right"></i></span><span class="meta">2&times; league points</span></div>
@@ -125,7 +128,7 @@
   </section>
 
   <!-- ============================= TOKEN ============================= -->
-  <section class="screen" data-screen="token">
+  <section class="screen" data-screen="token" style="padding-bottom:176px">
     <div class="topbar">
       <button class="back" data-go="markets"><i data-lucide="chevron-left"></i>Markets</button>
       <div class="grow"></div>
@@ -166,7 +169,7 @@
 
     <div class="sechead"><span class="lbl">Liquidity</span><span class="fill"></span><span class="act">Kayen</span></div>
     <div class="pad">
-      <div class="between"><span class="t-s">ASR / WCHZ</span><span class="meta">0.30% fee</span></div>
+      <div class="between"><span class="t-s coin">ASR / WCHZ</span><span class="meta">0.30% fee</span></div>
       <div class="meter mt12"><span style="width:26%"></span></div>
       <div class="between mt8"><span class="meta">Pool $11,315</span><span class="meta">1% of reserves = 1.28%</span></div>
       <p class="body mt12">Above about $560 the slippage costs more than a round trip on Binance.</p>
@@ -260,7 +263,7 @@
 
       <div class="msg"><div class="said them">I can tell you what moved. I don't read the wire, so I won't invent a reason.
         <div style="margin:14px 0">
-          <div class="kv"><span class="k">NAP</span><span class="v up">$0.2253 &nbsp;+11.4%</span></div>
+          <div class="kv"><span class="k coin">NAP</span><span class="v up">$0.2253 &nbsp;+11.4%</span></div>
           <div class="kv"><span class="k">Volume vs prior day</span><span class="v up">+554%</span></div>
           <div class="kv"><span class="k">Universe median today</span><span class="v down">-2.0%</span></div>
           <div class="kv"><span class="k">Price-stability pillar</span><span class="v">75, was 90</span></div>
@@ -316,7 +319,7 @@
     <div class="sechead"><span class="lbl">Route</span><span class="fill"></span><span class="act">5 venues</span></div>
     <div>
       <div class="venue" data-selected="true">
-        <div><div class="t-s">Kayen &middot; ASR/WCHZ</div><div class="meta mt4">On-chain, self-custody &middot; 0.30% &middot; scores League points</div></div>
+        <div><div class="t-s">Kayen &middot; <span class="coin">ASR/WCHZ</span></div><div class="meta mt4">On-chain, self-custody &middot; 0.30% &middot; scores League points</div></div>
         <div class="num" style="font-size:14px">551.2</div></div>
       <div class="venue">
         <div><div class="t-s">Binance &middot; ASR/USDT</div><div class="meta mt4">Read-only key &middot; 0.10% taker &middot; $2.43M depth</div></div>
@@ -346,11 +349,11 @@
     <div class="topbar"><button class="back" data-go="trade"><i data-lucide="x"></i></button><div class="grow"></div><button class="iconbtn"><i data-lucide="share"></i></button></div>
     <div class="pad" style="padding-top:40px">
       <div class="meta up">Swap confirmed</div>
-      <div class="t-xl mt8">199.4 ASR</div>
+      <div class="t-xl mt8">199.4 <span class="coin">ASR</span></div>
       <div class="meta mt8">Swapped 12,900 CHZ &middot; first slice of three</div>
     </div>
     <div class="pad" style="padding-top:26px">
-      <div class="kv"><span class="k">Route</span><span class="v">Kayen &middot; ASR/WCHZ</span></div>
+      <div class="kv"><span class="k">Route</span><span class="v">Kayen &middot; <span class="coin">ASR/WCHZ</span></span></div>
       <div class="kv"><span class="k">Price impact</span><span class="v">1.31%</span></div>
       <div class="kv"><span class="k">Fee</span><span class="v">0.30% &middot; $0.52</span></div>
       <div class="kv"><span class="k">Network</span><span class="v">0.38 CHZ</span></div>
@@ -381,7 +384,7 @@
 
     <div class="pot">
       <div class="meta">Prize pool this rodada</div>
-      <div class="amt mt8"><span id="pot">412,500</span><small>CHZ</small></div>
+      <div class="amt mt8"><span id="pot">412,500</span><small class="coin">CHZ</small></div>
       <div class="cap">about $5,594 &middot; growing 10,000 CHZ a day<br>8,420 traders &middot; 3d 09h left</div>
     </div>
 
@@ -454,7 +457,7 @@
       <div class="mission done"><span class="tick"><i data-lucide="check"></i></span>
         <div><div class="t-s">Read five morning notes</div><div class="meta mt4">5 of 5</div></div><span class="meta">+80</span></div>
       <div class="mission done"><span class="tick"><i data-lucide="check"></i></span>
-        <div><div class="t-s">Trade a token you have never held</div><div class="meta mt4">ASR</div></div><span class="meta">+150</span></div>
+        <div><div class="t-s">Trade a token you have never held</div><div class="meta mt4 coin">ASR</div></div><span class="meta">+150</span></div>
       <div class="mission"><span class="tick"></span>
         <div><div class="t-s">Provide liquidity to a fixture pool for 24h</div><div class="meta mt4">Paid in measured carry, net of impermanent loss</div></div><span class="meta">+400</span></div>
       <div class="mission"><span class="tick"></span>
@@ -505,7 +508,7 @@
     <div class="topbar"><button class="back" data-go="today"><i data-lucide="chevron-left"></i></button><div class="grow"></div>
       <button class="iconbtn"><i data-lucide="bookmark"></i></button><button class="iconbtn"><i data-lucide="share"></i></button></div>
     <div class="pad" style="padding-top:20px">
-      <div class="kicker" style="font-size:11px;font-weight:600;color:var(--faint)">Analysis</div>
+      <div class="kicker" style="font-size:10px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:.11em">Analysis</div>
       <h1 class="t-l" style="font-size:28px;margin-top:10px">Napoli is the only Fan Token pulling money in a red market</h1>
       <div class="meta mt12">FanTokens Newsroom &middot; 14:20 UTC &middot; 3 min read</div>
     </div>

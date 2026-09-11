@@ -16,9 +16,9 @@ site/app/app.css       Chiliz brand kit applied to an iOS shell
 site/app/app.js        routing, market list, SVG charts, gallery remote (postMessage {ftScreen})
 site/app/data.js       the dataset — see below
 site/app/frame.css     phone bezel on desktop, full-bleed under 520px
-site/assets/fonts/     Atyp Text + PP Mori (Chiliz licensed faces; internal review only,
-                       not for redistribution — swap for Space Grotesk/Manrope if this repo
-                       ever goes public-facing)
+site/assets/fonts/     TT Firs Neue (400/500/600/800/900) + Kallisto Heavy — the FanTokens
+                       brand faces, subset to latin + latin-ext. TypeType licensed; internal
+                       review only, not for redistribution
 ```
 
 ## Data
