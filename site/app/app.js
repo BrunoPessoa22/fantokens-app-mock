@@ -97,13 +97,13 @@
         '<text class="axis" x="' + (x + 5) + '" y="14">' + k.t + '</text>';
     }).join('');
     var last = v[v.length - 1];
-    var dir = v[v.length - 1] >= v[0] ? '#39D98A' : '#FF4D6E';
+    var dir = v[v.length - 1] >= v[0] ? '#00C700' : '#0076F4';
     host.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="height:170px">' +
       '<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">' +
       '<stop offset="0%" stop-color="' + dir + '" stop-opacity=".14"/><stop offset="100%" stop-color="' + dir + '" stop-opacity="0"/></linearGradient></defs>' +
       '<path d="' + area + '" fill="url(#g1)"/>' + m +
       '<path d="' + path + '" fill="none" stroke="' + dir + '" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/>' +
-      '<line x1="' + (w - INSET) + '" y1="4" x2="' + (w - INSET) + '" y2="' + (h - 14) + '" stroke="#FF0051" stroke-width="1.25" stroke-dasharray="2 3"/>' +
+      '<line x1="' + (w - INSET) + '" y1="4" x2="' + (w - INSET) + '" y2="' + (h - 14) + '" stroke="#D1EC00" stroke-width="1.25" stroke-dasharray="2 3"/>' +
       '<circle cx="' + (w - INSET) + '" cy="' + yAt(last, v, h, pad) + '" r="3" fill="' + dir + '"/>' +
       '<text class="axis" x="' + (w - INSET - 5) + '" y="12" text-anchor="end" fill="#FF7FA3">Kick-off</text>' +
       '</svg>' +
