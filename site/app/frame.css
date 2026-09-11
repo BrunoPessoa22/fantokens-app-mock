@@ -22,3 +22,8 @@ body { min-height: 100vh; display: flex; align-items: center; justify-content: c
   .statusbar { display: none; }
   .screen { padding-top: 12px; }
 }
+
+/* The gallery renders the app inside a 390px iframe, which trips the phone breakpoint and hides
+   the fake status bar. ?frame=1 restores it so a framed screen reads as iOS, not as a web page. */
+body.framed .statusbar { display: flex; top: 0; left: 0; right: 0; }
+body.framed .screen { padding-top: 54px; }

@@ -237,6 +237,7 @@
   }
 
   /* ---------- boot ---------- */
+  if (/[?&]frame=1/.test(location.search)) document.body.classList.add('framed');
   renderMarkets(); renderMovers(); renderMatches(); renderHoldings(); renderClubs();
   asrChart(); tapeChart(); potTicker();
   show((location.hash || '').replace('#', '') || 'today');
