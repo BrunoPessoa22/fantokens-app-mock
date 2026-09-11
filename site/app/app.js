@@ -69,10 +69,12 @@
   window.addEventListener('message', function (e) { var d = e.data || {}; if (d.ftScreen) show(d.ftScreen); if (d.ftSheet != null) sheet(!!d.ftSheet); });
 
   /* ---------- charts ---------- */
+  var INSET = 14;
+  function xAt(i, n, w) { return INSET + (i / (n - 1)) * (w - INSET * 2); }
   function linePath(vals, w, h, pad) {
     var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals), rng = (max - min) || 1;
     return vals.map(function (v, i) {
-      var x = (i / (vals.length - 1)) * w;
+      var x = xAt(i, vals.length, w);
       var y = pad + (1 - (v - min) / rng) * (h - pad * 2);
       return (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
     }).join(' ');
@@ -84,27 +86,29 @@
 
   function asrChart() {
     var host = document.getElementById('asr-chart'); if (!host) return;
-    var v = D.candles.closes, w = 354, h = 156, pad = 10;
+    var v = D.candles.closes, w = 390, h = 170, pad = 14;
     var path = linePath(v, w, h, pad);
-    var area = path + ' L' + w + ' ' + h + ' L0 ' + h + ' Z';
+    var area = path + ' L' + (w - INSET) + ' ' + h + ' L' + INSET + ' ' + h + ' Z';
     var marks = [{ i: 0.1, l: 'W', t: 'Lecce 0-4' }, { i: 30.7, l: 'W', t: 'Atalanta 2-1' }];
     var m = marks.map(function (k) {
-      var x = (k.i / (v.length - 1)) * w;
-      return '<line x1="' + x + '" y1="6" x2="' + x + '" y2="' + (h - 16) + '" stroke="rgba(237,237,237,.18)" stroke-width="1"/>' +
-        '<circle cx="' + x + '" cy="' + yAt(v[Math.round(k.i)], v, h, pad) + '" r="3.5" fill="#2BE08D"/>' +
+      var x = xAt(k.i, v.length, w);
+      return '<line x1="' + x + '" y1="4" x2="' + x + '" y2="' + (h - 14) + '" stroke="rgba(237,237,237,.14)" stroke-width="1"/>' +
+        '<circle cx="' + x + '" cy="' + yAt(v[Math.round(k.i)], v, h, pad) + '" r="2.5" fill="rgba(237,237,237,.85)"/>' +
         '<text class="axis" x="' + (x + 5) + '" y="14">' + k.t + '</text>';
     }).join('');
     var last = v[v.length - 1];
-    host.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="height:156px">' +
+    var dir = v[v.length - 1] >= v[0] ? '#39D98A' : '#FF4D6E';
+    host.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="height:170px">' +
       '<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">' +
-      '<stop offset="0%" stop-color="#CF85FF" stop-opacity=".28"/><stop offset="100%" stop-color="#CF85FF" stop-opacity="0"/></linearGradient></defs>' +
+      '<stop offset="0%" stop-color="' + dir + '" stop-opacity=".14"/><stop offset="100%" stop-color="' + dir + '" stop-opacity="0"/></linearGradient></defs>' +
       '<path d="' + area + '" fill="url(#g1)"/>' + m +
-      '<path d="' + path + '" fill="none" stroke="#CF85FF" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
-      '<line x1="' + (w - 2) + '" y1="6" x2="' + (w - 2) + '" y2="' + (h - 16) + '" stroke="#FF0051" stroke-width="1.5" stroke-dasharray="3 3"/>' +
-      '<circle cx="' + (w - 2) + '" cy="' + yAt(last, v, h, pad) + '" r="3.5" fill="#FF0051"/>' +
-      '<text class="axis" x="' + (w - 4) + '" y="14" text-anchor="end" fill="#FF7FA3">Kick-off</text>' +
+      '<path d="' + path + '" fill="none" stroke="' + dir + '" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/>' +
+      '<line x1="' + (w - INSET) + '" y1="4" x2="' + (w - INSET) + '" y2="' + (h - 14) + '" stroke="#FF0051" stroke-width="1.25" stroke-dasharray="2 3"/>' +
+      '<circle cx="' + (w - INSET) + '" cy="' + yAt(last, v, h, pad) + '" r="3" fill="' + dir + '"/>' +
+      '<text class="axis" x="' + (w - INSET - 5) + '" y="12" text-anchor="end" fill="#FF7FA3">Kick-off</text>' +
       '</svg>' +
-      '<div class="between s12 muted" style="padding:2px 2px 0"><span>31 Aug</span><span>4h candles, 10 days</span><span>today</span></div>';
+      '<div class="between meta" style="padding:4px 18px 0"><span>31 Aug</span><span>4h candles &middot; 10d ' +
+      pct(((last - v[0]) / v[0]) * 100) + '</span><span>today</span></div>';
   }
 
   function tapeChart() {
@@ -113,23 +117,24 @@
       -.72, -.8, -.9, -.85, -.7, -.4, -.25, -.3, -.45, -.6, -.72, -.8, -.9];
     var fb = [0, .05, .15, .25, .8, 1.1, 1.25, 1.4, 1.35, 1.5, 1.45, 1.6, 1.55, 1.7, 1.75, 1.8, 1.9, 1.85, 1.95,
       2.0, 1.9, 1.75, 1.6, 1.5, 1.55, 1.7, 1.8, 1.85, 1.9, 1.85, 1.8, 1.8];
-    var all = asr.concat(fb), w = 330, h = 130, pad = 8;
+    var all = asr.concat(fb), w = 390, h = 140, pad = 12;
     function p(vals) {
       var min = Math.min.apply(null, all), max = Math.max.apply(null, all), rng = (max - min) || 1;
       return vals.map(function (v, i) {
-        var x = (i / (vals.length - 1)) * w, y = pad + (1 - (v - min) / rng) * (h - pad * 2);
+        var x = xAt(i, vals.length, w), y = pad + (1 - (v - min) / rng) * (h - pad * 2);
         return (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
       }).join(' ');
     }
     var goals = [[4, "12' FEN"], [22, "47' ROM"]].map(function (g) {
-      var x = (g[0] / (asr.length - 1)) * w;
+      var x = xAt(g[0], asr.length, w);
       return '<line x1="' + x + '" y1="4" x2="' + x + '" y2="' + h + '" stroke="rgba(237,237,237,.30)" stroke-width="1" stroke-dasharray="2 3"/>' +
         '<text class="tapelabel" x="' + (x + 4) + '" y="13">' + g[1] + '</text>';
     }).join('');
-    host.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="height:130px">' + goals +
-      '<path d="' + p(fb) + '" fill="none" stroke="#5B86D6" stroke-width="2" stroke-linejoin="round"/>' +
-      '<path d="' + p(asr) + '" fill="none" stroke="#E0566B" stroke-width="2" stroke-linejoin="round"/></svg>' +
-      '<div class="between s12 muted" style="padding:4px 4px 0"><span>Kick-off</span><span>63&#39; and running</span></div>';
+    host.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="height:140px">' + goals +
+      '<path d="' + p(fb) + '" fill="none" stroke="#6E97E0" stroke-width="1.75" stroke-linejoin="round"/>' +
+      '<path d="' + p(asr) + '" fill="none" stroke="#E0566B" stroke-width="1.75" stroke-linejoin="round"/></svg>' +
+      '<div class="between meta" style="padding:6px 18px 0"><span style="color:#E0566B">ASR -0.9%</span>' +
+      '<span style="color:#6E97E0">FB +1.8%</span><span>63&#39; and running</span></div>';
   }
 
   function spark(sym, chg) {
@@ -163,17 +168,18 @@
       if (state.sort === 'depth') return (POOL[b.s] || 0) - (POOL[a.s] || 0);
       return b.sc - a.sc;
     });
-    host.innerHTML = rows.map(function (t, i) {
-      var sub = '<span class="grade g' + t.g + '">' + t.g + '</span>' + t.l;
-      if (POOL[t.s]) sub += ' <span class="muted">· pool ' + money(POOL[t.s]) + '</span>';
-      if (FLOW[t.s] > 100) sub += ' <span class="up">· flow ' + Math.round(FLOW[t.s]) + '%</span>';
+    host.innerHTML = rows.map(function (t) {
+      var sub = '<span class="grade g' + t.g + '">' + t.g + '</span> &middot; ' + t.l;
+      if (POOL[t.s]) sub += ' &middot; pool ' + money(POOL[t.s]);
+      if (FLOW[t.s] > 100) sub += ' &middot; <span class="up">flow +' + Math.round(FLOW[t.s]) + '%</span>';
       var right = t.fz
-        ? '<span class="pill warn" style="height:20px;font-size:10px">frozen ' + t.fz + 'h</span>'
-        : '<span class="ch delta ' + cls(t.ch) + '">' + pct(t.ch) + '</span>';
+        ? '<div class="ch faint">frozen ' + t.fz + 'h</div>'
+        : '<div class="ch delta ' + cls(t.ch) + '">' + pct(t.ch) + '</div>';
       return '<div class="trow"' + (t.s === 'ASR' ? ' data-go="token"' : '') + '>' + crest(t) +
-        '<div><div class="nm">' + t.t + '</div><div class="sb">' + sub + '</div></div>' +
+        '<div><div class="nm">' + t.t + '</div>' +
+        '<div class="sb">' + sub + '</div></div>' +
         '<div>' + (t.fz ? '' : spark(t.s, t.ch)) + '</div>' +
-        '<div class="rt"><span class="px num">' + px(t.px) + '</span>' + right + '</div></div>';
+        '<div class="rt"><div class="px">' + px(t.px) + '</div>' + right + '</div></div>';
     }).join('');
     icons();
   }
@@ -183,22 +189,17 @@
     var up = D.tokens.slice().sort(function (a, b) { return b.ch - a.ch; }).slice(0, 3);
     var dn = D.tokens.slice().sort(function (a, b) { return a.ch - b.ch; }).slice(0, 3);
     host.innerHTML = up.concat(dn).map(function (t) {
-      return '<button style="height:auto;padding:8px 12px;border-radius:14px;text-align:left">' +
-        '<div style="display:flex;gap:7px;align-items:center">' + crest(t, 'sm') +
-        '<div><div style="font-size:12px;font-weight:600;color:var(--ink)">' + t.s + '</div>' +
-        '<div class="delta ' + cls(t.ch) + '" style="font-size:12.5px">' + pct(t.ch) + '</div></div></div></button>';
+      return '<div><div class="s">' + t.s + '</div><div class="d delta ' + cls(t.ch) + '">' + pct(t.ch) + '</div></div>';
     }).join('');
   }
 
   function renderMatches() {
     var host = document.getElementById('asr-matches'); if (!host) return;
     host.innerHTML = D.matches.map(function (m) {
-      var res = m[4], badge = res === 'win' ? 'up' : (res === 'loss' ? 'down' : '');
-      return '<div class="card flat" style="margin-bottom:8px"><div class="between">' +
-        '<div><div class="s13" style="font-weight:600">' + m[1] + ' <span class="num">' + m[3] + '</span> ' + m[2] + '</div>' +
-        '<div class="s12 muted mt6">' + m[0] + ' · <span class="' + badge + '">' + res + '</span></div></div>' +
-        '<div style="text-align:right"><div class="delta ' + cls(m[8]) + '">' + pct(m[8]) + '</div>' +
-        '<div class="s12 muted">24h window</div></div></div></div>';
+      var res = m[4] === 'win' ? 'W' : (m[4] === 'loss' ? 'L' : 'D');
+      return '<div class="matchrow"><div><div class="t-s">' + m[1] + ' <span class="num">' + m[3] + '</span> ' + m[2] + '</div>' +
+        '<div class="meta mt4">' + m[0] + ' &middot; ' + res + '</div></div>' +
+        '<div class="delta ' + cls(m[8]) + '" style="font-size:14px">' + pct(m[8]) + '</div></div>';
     }).join('');
   }
 
@@ -206,23 +207,23 @@
     var host = document.getElementById('holdings'); if (!host) return;
     var pos = [['NAP', 3000], ['CHZ', 41208], ['PSG', 1120], ['SANTOS', 800], ['ASR', 199.4]];
     var by = {}; D.tokens.forEach(function (t) { by[t.s] = t; });
-    host.innerHTML = '<div class="card" style="padding:4px 14px">' + pos.map(function (p, i) {
+    host.innerHTML = pos.map(function (p) {
       var t = by[p[0]], val = t.px * p[1];
-      return '<div class="rowx" style="padding:11px 0' + (i ? ';border-top:1px solid var(--line)' : '') + '">' + crest(t) +
-        '<div class="grow"><div class="s13" style="font-weight:600">' + t.t + '</div>' +
-        '<div class="s12 muted mt6">' + p[1].toLocaleString() + ' ' + t.s + '</div></div>' +
-        '<div style="text-align:right"><div class="num s14">$' + val.toFixed(2) + '</div>' +
-        '<div class="delta ' + cls(t.ch) + '" style="font-size:12px">' + pct(t.ch) + '</div></div></div>';
-    }).join('') + '</div>';
+      return '<div class="row">' + crest(t) +
+        '<div class="grow"><div class="t-s">' + t.t + '</div><div class="meta mt4">' + p[1].toLocaleString() + ' ' + t.s + '</div></div>' +
+        '<div class="rt" style="text-align:right"><div class="num" style="font-size:14px">$' + val.toFixed(2) + '</div>' +
+        '<div class="delta ' + cls(t.ch) + '" style="font-size:12px;margin-top:2px">' + pct(t.ch) + '</div></div></div>';
+    }).join('');
+    icons();
   }
 
   function renderClubs() {
     var host = document.getElementById('clubgrid'); if (!host) return;
     var picks = ['ASR', 'NAP', 'PSG', 'BAR', 'CITY', 'GAL', 'FB', 'SANTOS', 'MENGO', 'JUV', 'ACM', 'OG'];
     var by = {}; D.tokens.forEach(function (t) { by[t.s] = t; });
-    host.innerHTML = picks.map(function (s, i) {
-      var t = by[s];
-      return '<div class="clubpick"' + (i < 3 ? ' data-selected="true"' : '') + '>' + crest(t, 'sm') + t.s + '</div>';
+    host.innerHTML = picks.map(function (sym, i) {
+      var t = by[sym];
+      return '<div class="clubpick"' + (i < 3 ? ' data-selected="true"' : '') + '>' + crest(t, 'lg') + t.s + '</div>';
     }).join('');
   }
 
